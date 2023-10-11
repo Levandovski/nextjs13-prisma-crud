@@ -21,7 +21,8 @@ export default function NewPage({ params }: { params: { searchParams: {}, id: st
                     setDescription(data.description);
                 });
         }
-    }, []);
+
+    }, [params.id]);
 
 
     const onSubmit = async (e: FormEvent) => {

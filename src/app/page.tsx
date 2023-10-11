@@ -12,10 +12,9 @@ interface ITasks {
 async function loadTasks(): Promise<ITasks[] | any> { 
   const allTasks = await prisma.task.findMany();
   return allTasks;
-
 }
 
-export const revalidat = 60;
+export const revalidate = 60;
 
 export default async function HomePage() {
   const tasks = await loadTasks();
