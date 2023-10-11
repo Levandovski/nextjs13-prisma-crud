@@ -8,9 +8,10 @@ interface ITasks {
   createdAt: string
 }
 
-export const revalidate = 60;
+// export const revalidate = 60;
+export const revalidate = 'force-dynamic';
 
-async function loadTasks(): Promise<ITasks[] | any> { 
+async function loadTasks(): Promise<ITasks[] | any> {
   const allTasks = await prisma.task.findMany();
   return allTasks;
 }

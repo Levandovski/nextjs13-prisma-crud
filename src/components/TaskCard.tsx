@@ -26,7 +26,7 @@ export default function TaskCard({ task }: { task: ITasks }) {
         >
             <h3 className="font-bold text-2xl mb-2">{task.title}</h3>
             <p>{task.description}</p>
-            {/* <p>{date}</p> */}
+            <p>{date}</p>
         </div>
     )
 }
